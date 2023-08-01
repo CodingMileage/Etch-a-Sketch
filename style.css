@@ -1,0 +1,12 @@
+* {
+    background-color: darkslategray;
+}
+
+.grid {
+    display: grid;
+}
+
+#box {
+    border: 1px solid;
+    padding: 10px;
+}
