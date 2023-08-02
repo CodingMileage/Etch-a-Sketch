@@ -2,11 +2,38 @@
     background-color: darkslategray;
 }
 
-.grid {
-    display: grid;
+
+.grid-container {
+    /* height: 40vh;
+    width: 40vw; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-#box {
+.grid {
+    display: grid;
+    
+    /* width: 80%; */
+    /* height: 80%; */
+    /* border: 2px solid; */
+    /* margin: 200px; */
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+
+.box {
     border: 1px solid;
-    padding: 10px;
+    padding: 20px;
+}
+
+button {
+    padding: 8px;
+    margin-top: 10px;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
 }
