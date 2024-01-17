@@ -1,25 +1,37 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Etch-a-Sketch</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
+  <head>
+    <title>Etch-a-Sketch</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-    <body>
-        <div class="grid-container">
-            <div class="title"><h1>Sketch Pad</h1></div>
-            <div class="grid">
-
-            </div>
-        </div>
-        <div class="btn-container">
-            <button class="color" onclick="changeColor(prompt('Color?'))">Color</button>
-            <button class="size" onclick="changeSize(prompt('Grid Size?\nEnter one number.'))">Grid Size</button>
-            <button class="mouseoverr" onclick="changeMode('mouseover')">Mouse Over</button>
-            <button class="clickk" onclick="changeMode('click')">Click</button>
-            <button class="erase" onclick="changeColor('darkslategray')">Erase</button>
-            <button class="clear" onclick="reset()">Clear</button>
-        </div>
-    </body>
-    <script src="app.js"></script>
+  <body>
+    <div class="grid-container">
+      <div class="title"><h1>Sketch Pad</h1></div>
+      <div class="grid"></div>
+    </div>
+    <div class="btn-container">
+      <button class="color" onclick="changeColor(prompt('Color?'))">
+        Color
+      </button>
+      <button
+        class="size"
+        onclick="changeSize(prompt('Grid Size?\nEnter one number.'))"
+      >
+        Grid Size
+      </button>
+      <button class="mouseoverr" onclick="changeMode('mouseover')">
+        Mouse Over
+      </button>
+      <button class="mouseHold" onclick="changeMode('mousedown')">
+        Mouse Hold
+      </button>
+      <button class="clickk" onclick="changeMode('click')">Click</button>
+      <button class="erase" onclick="changeColor('darkslategray')">
+        Erase
+      </button>
+      <button class="clear" onclick="reset()">Clear</button>
+    </div>
+  </body>
+  <script src="app.js"></script>
 </html>

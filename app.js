@@ -4,18 +4,21 @@ board.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
 board.style.gridTemplateRows = `repeat(${size}, 1fr)`;
 
 let color = "black";
-let mode = "mouseover";
+let mode = "click";
 
 function addEventListenersToSquares() {
   let squares = document.querySelectorAll(".box");
   squares.forEach((square) => {
     square.removeEventListener("mouseover", handleMouseOver);
     square.removeEventListener("click", handleClick);
+    square.removeEventListener("mousedown", handleHold);
 
     if (mode === "mouseover") {
       square.addEventListener("mouseover", handleMouseOver);
     } else if (mode === "click") {
       square.addEventListener("click", handleClick);
+    } else if (mode === "mousedown") {
+      square.addEventListener("mousedown", handleHold);
     }
   });
 }
@@ -25,6 +28,10 @@ function handleMouseOver() {
 }
 
 function handleClick() {
+  this.style.backgroundColor = color;
+}
+
+function handleHold() {
   this.style.backgroundColor = color;
 }
 
